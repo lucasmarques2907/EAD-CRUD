@@ -2,8 +2,10 @@
 session_start();
 require_once 'config/connection.php';
 
-$sql = mysqli_query($conn, "SELECT username FROM users WHERE usersId = '" . $_SESSION["userId"] . "';");
-$aux = mysqli_fetch_assoc($sql);
+if(isset($_SESSION["userId"])){
+  $sql = mysqli_query($conn, "SELECT username FROM users WHERE usersId = '" . $_SESSION["userId"] . "';");
+  $aux = mysqli_fetch_assoc($sql);
+}
 
 ?>
 <!DOCTYPE html>

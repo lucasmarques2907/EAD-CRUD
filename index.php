@@ -2,7 +2,7 @@
 include_once 'header.php';
 
 if (isset($_SESSION["userId"])) {
-    echo ("<h1 class='text-center mb-3'>Olá, <span class='usuario'>" . $aux["username"] . "</span> &#x1F44B</h1>");
+    echo ("<h1 class='text-center mb-3'>Olá, <span class='usuario'>" . $aux["username"] . "</span>! &#x1F44B</h1>");
 }
 ?>
 <div class="container sobre text-center">
